@@ -9,13 +9,15 @@ const Banner = (props) => {
   const handleOnPlay = () => {
     console.log("handleOnPlay");
   };
+
   return (
-    <div
-      className={styles.banner}
-      style={{
-        backgroundImage: `url(${imgUrl})`,
-      }}
-    >
+    <>
+      <div
+        className={styles.banner}
+        style={{
+          backgroundImage: `url(${imgUrl})`,
+        }}
+      />
       <div className={styles.descContainer}>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.subtitle}>{subTitle}</p>
@@ -34,7 +36,7 @@ const Banner = (props) => {
           </Button>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

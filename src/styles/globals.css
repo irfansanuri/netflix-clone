@@ -1,50 +1,50 @@
 @font-face {
   font-family: "Netflix Sans";
-  src: url("/fonts/NetflixSansBlack.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
+  src: url("/fonts/NetflixSansBlack.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Netflix Sans";
-  src: url("/fonts/NetflixSansBold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
+  src: url("/fonts/NetflixSansBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Netflix Sans";
-  src: url("/fonts/NetflixSansIcon.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  src: url("/fonts/NetflixSansIcon.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Netflix Sans";
-  src: url("/fonts/NetflixSansLight.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
+  src: url("/fonts/NetflixSansLight.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Netflix Sans";
-  src: url("/fonts/NetflixSansMedium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
+  src: url("/fonts/NetflixSansMedium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Netflix Sans";
-  src: url("/fonts/NetflixSansRegular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  src: url("/fonts/NetflixSansRegular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Netflix Sans";
-  src: url("/fonts/NetflixSansThin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
+  src: url("/fonts/NetflixSansThin.ttf") format("truetype");
 }
 
 html,
@@ -52,9 +52,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Netflix Sans", Arial, sans-serif !important;
-  /* font-family:"Roboto Slab", -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif; */
   background-color: var(--black40);
   color: white;
   overflow-x: hidden;
@@ -62,7 +59,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background: transparent;
 }
 
 a {
@@ -113,38 +110,33 @@ button {
   background-color: transparent;
   text-transform: none !important;
   margin: 0;
-  border: 0px;
-  outline: 0px;
+  border: 0;
+  outline: 0;
   color: var(--white);
 }
 
 :root {
-  --black: rgb(0, 0, 0);
+  --black: #000;
   --black10: #181818;
   --black20: rgba(0, 0, 0, 0.6);
-  --black30: rgb(17, 24, 39);
+  --black30: #111827;
   --black40: #141414;
-  --black50: rgb(20, 20, 20);
-
-  --gray10: rgb(119, 119, 119);
-  --gray20: rgb(156, 163, 175);
+  --black50: #141414;
+  --gray10: #777777;
+  --gray20: #9ca3af;
   --gray40: rgba(42, 42, 42, 0.6);
-
-  --white10: rgba(255, 255, 255, 1);
-  --white20: rgba(243, 244, 246, 1);
-  --white30: rgb(209, 213, 219);
-
-  --green10: rgba(110, 231, 183, 1);
+  --white10: #ffffff;
+  --white20: #f3f4f6;
+  --white30: #d1d5db;
+  --green10: #6ee7b7;
   --shadow10: rgba(0, 0, 0, 0.3);
   --shadow20: rgba(158, 155, 155, 0.3);
   --shadow30: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
-
-  --red: rgb(220, 38, 38);
+  --red: #dc2626;
   --red10: rgba(185, 28, 28, 1);
-
-  --blue: rgba(75, 85, 99, 1);
-  --blue20: rgb(55, 65, 81);
+  --blue: #4b5563;
+  --blue20: #373f51;
 }
 
 @media (prefers-color-scheme: dark) {

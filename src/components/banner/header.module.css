@@ -1,0 +1,109 @@
+.img {
+  margin: 5px 25px 0 0;
+  width: 40px;
+}
+
+.header {
+  display: flex;
+  padding: 0 4%;
+  height: 41px;
+  justify-content: space-between;
+  user-select: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header.scrolled {
+  background-color: #141414;
+}
+
+.leftHeader {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  font-family: "Netflix Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e5e5e5;
+  margin-left: 20px;
+}
+
+.menu li:hover {
+  color: #b3b3b3;
+  transition: 0.2s;
+}
+
+.browse {
+  color: #ffffff;
+  font-size: 1vh;
+  display: flex;
+  align-items: center;
+}
+
+.rightHeader {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin: auto auto auto 16px;
+}
+
+.icon,
+.avatarContainer {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.avatarContainer:hover .arrowIcon {
+  transition: transform 0.3s;
+  transform: rotate(180deg);
+}
+
+.avatarContainer:not(:hover) .arrowIcon {
+  transition: transform 0.3s;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-image: url("https://ih0.redbubble.net/image.618369215.1083/flat,1000x1000,075,f.u2.jpg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 600px) {
+  .img {
+    width: 70px;
+  }
+  .browse {
+    font-size: 1.2vh;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .img {
+    width: 100px;
+  }
+  .header {
+    height: 68px;
+  }
+}
