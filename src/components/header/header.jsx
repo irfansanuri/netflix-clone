@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./header.module.css";
-import SearchIcon from "@mui/icons-material/Search";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Box from "@mui/material/Box";
+import ProfileDropdown from "../dropdown/ProfileDropdown/ProfileDropdown";
+import NotiDropdown from "../dropdown/NotiDropdown/NotiDropdown";
+import SearchBar from "../searchBar/Search";
+import styles from "./header.module.css";
 
 const navBarList = [
-  { name: "Home", url: "#" },
-  { name: "TV Shows", url: "#" },
-  { name: "Movies", url: "#" },
-  { name: "New & Popular", url: "#" },
-  { name: "My List", url: "#" },
-  { name: "Browse by Languages", url: "#" },
+  { name: "Home", url: "/" },
+  { name: "TV Shows", url: "/" },
+  { name: "Movies", url: "/" },
+  { name: "New & Popular", url: "/" },
+  { name: "My List", url: "/" },
+  { name: "Browse by Languages", url: "/test" },
 ];
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,14 +38,13 @@ function Header() {
   }, []);
 
   return (
-    <div
-      className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}
-    >
+    <div className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.leftHeader}>
         <Link href="#">
           <Image
             className={styles.img}
             src="netflix.svg"
+            alt="netflix logo"
             width="100"
             height="25"
           />
@@ -66,7 +67,11 @@ function Header() {
         >
           <ul className={styles.menu}>
             {navBarList.map((navBar, index) => (
-              <li key={index}>
+              <li
+                key={index}
+                className={index === activeIndex ? styles.active : ""}
+                onClick={() => setActiveIndex(index)}
+              >
                 <Link href={navBar.url}>{navBar.name}</Link>
               </li>
             ))}
@@ -95,42 +100,16 @@ function Header() {
         </Box>
       </div>
       <div className={styles.rightHeader}>
-        <Link href="#" className={styles.icon}>
-          <SearchIcon
-            sx={{
-              display: {
-                xs: "none",
-                sm: "inline",
-                visibility: { xs: "hidden", sm: "visible" },
-              },
-            }}
-          />
-        </Link>
-        <Link href="#" className={styles.icon}>
-          <NotificationsNoneIcon />
-        </Link>
-        <Link
-          href="#"
-          className={styles.avatarContainer}
-          style={{ marginLeft: "0 !important" }}
-        >
-          <div
-            className={styles.icon}
-            style={{ display: "flex", alignItems: "center" }}
-          >
-            <Box className={styles.avatar} />
-            <ArrowDropDownIcon
-              className={styles.arrowIcon}
-              sx={{
-                display: {
-                  xs: "none",
-                  sm: "inline",
-                  visibility: { xs: "hidden", sm: "visible" },
-                },
-              }}
-            />
-          </div>
-        </Link>
+        <div className={styles.icon}>
+          <SearchBar />
+        </div>
+        <div className={styles.icon}>
+          <NotiDropdown />
+        </div>
+
+        <div className={styles.icon}>
+          <ProfileDropdown />
+        </div>
       </div>
     </div>
   );

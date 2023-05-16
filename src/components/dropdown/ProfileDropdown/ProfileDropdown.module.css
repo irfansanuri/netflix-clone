@@ -1,0 +1,21 @@
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-image: url("https://ih0.redbubble.net/image.618369215.1083/flat,1000x1000,075,f.u2.jpg");
+  background-size: cover;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+.re-rotate {
+  transition: transform 0.3s;
+}

@@ -1,19 +1,17 @@
-.img {
-  margin: 5px 25px 0 0;
-  width: 40px;
-}
-
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0 4%;
   height: 41px;
-  justify-content: space-between;
-  user-select: none;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
   background-color: transparent;
   transition: background-color 0.3s ease-in-out;
+  z-index: 999;
+  user-select: none;
 }
 
 .header.scrolled {
@@ -25,29 +23,33 @@
   align-items: center;
 }
 
-.menu {
-  align-items: center;
-  display: flex;
-  margin: 0;
-  padding: 0;
+.img {
+  margin: 5px 25px 0 0;
+  width: 40px;
 }
 
 .menu {
-  list-style-type: none;
+  display: flex;
+  margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .menu li {
   font-family: "Netflix Sans", Arial, sans-serif;
   font-size: 14px;
-  font-weight: 500;
   color: #e5e5e5;
   margin-left: 20px;
+  transition: color 0.2s;
 }
 
 .menu li:hover {
   color: #b3b3b3;
-  transition: 0.2s;
+}
+
+.menu li.active {
+  color: #ffffff;
+  font-weight: 900;
 }
 
 .browse {
@@ -63,37 +65,14 @@
 }
 
 .icon {
-  margin: auto auto auto 16px;
-}
-
-.icon,
-.avatarContainer {
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-}
-
-.avatarContainer:hover .arrowIcon {
-  transition: transform 0.3s;
-  transform: rotate(180deg);
-}
-
-.avatarContainer:not(:hover) .arrowIcon {
-  transition: transform 0.3s;
-}
-
-.avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 5px;
-  background-image: url("https://ih0.redbubble.net/image.618369215.1083/flat,1000x1000,075,f.u2.jpg");
-  background-size: cover;
+  margin-left: 20px;
 }
 
 @media screen and (min-width: 600px) {
   .img {
     width: 70px;
   }
+
   .browse {
     font-size: 1.2vh;
   }
@@ -103,6 +82,7 @@
   .img {
     width: 100px;
   }
+
   .header {
     height: 68px;
   }

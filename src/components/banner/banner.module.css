@@ -55,6 +55,7 @@
 .subtitle {
   font-size: 1.2vw;
   font-weight: 500;
+  text-shadow: 0.06vw 0.06vw #888888;
 }
 
 /* Buttons */
@@ -64,33 +65,33 @@
 
 .primaryButton,
 .secondaryButton {
-  font-size: 1.1vw;
-  padding: 0.32vw 2.24vw 0.32vw 0.84vw;
-  margin-right: 1vw;
-  border-radius: 0.2vw;
-  min-width: 0;
+  font-size: 1.1vw !important;
+  padding: 0.32vw 2.24vw 0.32vw 0.84vw !important;
+  margin-right: 1vw !important;
+  border-radius: 0.2vw !important;
+  min-width: 0 !important;
 }
 
 .primaryButton {
-  color: #000;
-  background-color: #ffffff; /* white */
+  color: #000 !important;
+  background-color: #ffffff !important; /* white */
 }
 
 .secondaryButton {
-  color: #ffffff; /* white */
-  background-color: rgba(109, 109, 110, 0.7);
+  color: #ffffff !important; /* white */
+  background-color: rgba(109, 109, 110, 0.7) !important;
 }
 
 .primaryButton:hover {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75) !important;
 }
 
 .secondaryButton:hover {
-  background-color: rgba(109, 109, 110, 0.4);
+  background-color: rgba(109, 109, 110, 0.4) !important;
 }
 
 /* Icons */
 .icon {
-  font-size: 2.2vw;
-  margin: 0 0.5vw 0 0;
+  font-size: 2.2vw !important;
+  margin: 0 0.5vw 0 0 !important;
 }

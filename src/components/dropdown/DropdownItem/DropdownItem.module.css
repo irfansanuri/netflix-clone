@@ -1,0 +1,28 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdownItem {
+  position: absolute;
+  right: 0;
+  margin-right: -6px;
+  margin-top: -5px;
+}
+
+.arrowContainer {
+  height: 24px;
+  border-bottom: 2px solid #e5e5e5;
+  direction: rtl;
+}
+
+.arrowIcon {
+  font-size: 40px;
+  color: #e5e5e5;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
+  line-height: 1;
+  position: relative;
+}
