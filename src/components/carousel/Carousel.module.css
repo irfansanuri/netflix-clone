@@ -1,3 +1,19 @@
+.carouselContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1.8% 0;
+}
+
+.title {
+  position: relative;
+}
+
+.title h2 {
+  font-size: 12px;
+  line-height: 1.25vw;
+  margin: 0 4.2% 0.7em;
+}
+
 .carousel {
   width: 100vw;
   display: flex;
@@ -9,7 +25,7 @@
   position: absolute;
   display: flex;
   padding: 0 4%;
-  transition: 1s;
+  transition: transform 1s;
 }
 
 .item {
@@ -20,6 +36,7 @@
     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
     rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   transition: transform 300ms ease 100ms;
+  overflow: hidden;
 }
 
 .item img {
@@ -61,17 +78,26 @@
   .item img {
     width: calc(30.666vw - 0.4vw);
   }
+  .title h2 {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 900px) {
   .item img {
     width: calc(23vw - 0.4vw);
   }
+  .title h2 {
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 1200px) {
   .item img {
     width: calc(18.4vw - 0.4vw);
+  }
+  .title h2 {
+    font-size: 1.3vw;
   }
 }
 

@@ -54,34 +54,39 @@ const Carousel = () => {
   };
 
   return (
-    <div
-      ref={carouselRef}
-      className={styles.carousel}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      {hovered && (
-        <div className={styles.back} onClick={() => updatePage("prev")}>
-          <KeyboardArrowLeftIcon className={styles.icon} />
-        </div>
-      )}
-      <div className={styles["item-container"]} ref={itemContainerRef}>
-        {[...Array(23)].map((_, index) => (
-          <div key={index} className={styles.item}>
-            <Image
-              src="/static/thumbnail.jpg"
-              alt="Thumbnail"
-              width={300}
-              height={200}
-            />
-          </div>
-        ))}
+    <div className={styles.carouselContainer}>
+      <div className={styles.title}>
+        <h2>US Reality TV</h2>
       </div>
-      {hovered && (
-        <div className={styles.forward} onClick={() => updatePage("next")}>
-          <KeyboardArrowRightIcon className={styles.icon} />
+      <div
+        ref={carouselRef}
+        className={styles.carousel}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        {hovered && (
+          <div className={styles.back} onClick={() => updatePage("prev")}>
+            <KeyboardArrowLeftIcon className={styles.icon} />
+          </div>
+        )}
+        <div className={styles["item-container"]} ref={itemContainerRef}>
+          {[...Array(23)].map((_, index) => (
+            <div key={index} className={styles.item}>
+              <Image
+                src="/static/thumbnail.jpg"
+                alt="Thumbnail"
+                width={300}
+                height={200}
+              />
+            </div>
+          ))}
         </div>
-      )}
+        {hovered && (
+          <div className={styles.forward} onClick={() => updatePage("next")}>
+            <KeyboardArrowRightIcon className={styles.icon} />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Banner from "@/components/banner/banner";
+import Carousel from "@/components/carousel/Carousel";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +21,10 @@ export default function Home() {
         subTitle="Raising her daughter in the small town of Middleton, an enchanting widow with magical powers provokes the interest and exasperation of a big-city doctor."
         imgUrl="/static/clifford.jpg"
       />
-      <div style={{ height: "300vh" }}></div>
+      <div className={styles.carousel}>
+        <Carousel />
+        <Carousel />
+      </div>
     </>
   );
 }
-
-
