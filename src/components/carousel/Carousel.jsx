@@ -4,7 +4,7 @@ import Image from "next/image";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-const Carousel = () => {
+const Carousel = (props) => {
   const itemContainerRef = useRef(null);
   const carouselRef = useRef(null);
 
@@ -56,7 +56,7 @@ const Carousel = () => {
   return (
     <div className={styles.carouselContainer}>
       <div className={styles.title}>
-        <h2>US Reality TV</h2>
+        <h2>{props.title}</h2>
       </div>
       <div
         ref={carouselRef}
@@ -80,6 +80,7 @@ const Carousel = () => {
               />
             </div>
           ))}
+          {/* {props.children} */}
         </div>
         {hovered && (
           <div className={styles.forward} onClick={() => updatePage("next")}>

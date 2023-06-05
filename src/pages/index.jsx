@@ -22,8 +22,8 @@ export default function Home() {
         imgUrl="/static/clifford.jpg"
       />
       <div className={styles.carousel}>
-        <Carousel />
-        <Carousel />
+        <Carousel title="US Reality TV"></Carousel>
+        <Carousel title="Freshly Selected For You" />
       </div>
     </>
   );
